@@ -15,16 +15,16 @@ def index():
 
 @app.route('/play', methods=['POST'])
 def play():
-    computer = assign(str(randInt(0, 2)))
+    computer = str(assign(randInt(0, 2)))
     player = request.form['gesture']
     result = logic[player][computer]
     return render_template('result.html', result=result, computer=computer)
 
 
 def assign(num):
-    if num is 0:
+    if (num == 0):
         num = "Rock"
-    elif num is 1:
+    elif (num == 1):
         num = "Paper"
     else:
         num = "Scissors"
