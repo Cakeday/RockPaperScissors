@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissor</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Rock Paper Scissor Result</h2>
+        <!-- image goes here -->
+        <h1>Computer chose: {{computer}}</h1>
+        <h1>You {{result}}!</h1>
+        <form action="/play" method="post">
+            <div class="form-group">
+                <label for="gesture">Choose: </label>
+                <select class="form-control" id="gesture" name="gesture">
+                    <option>Rock</option>
+                    <option>Paper</option>
+                    <option>Scissors</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Play Again!</button>
+        </form>
+    </div>
+</body>
+</html>
